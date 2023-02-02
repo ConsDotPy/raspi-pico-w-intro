@@ -1,6 +1,5 @@
 .idea
-.vscode/*
-!.vscode/settings.json
+.vscode
 _deps
 cmake-*
 build/*
@@ -11,3 +10,6 @@ build/serialBlink/*
 .DS_Store
 *.pdf
 .cache
+CMakeLists.txt
+pico_sdk_import.cmake
+.gitignore
