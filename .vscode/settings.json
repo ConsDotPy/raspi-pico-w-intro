@@ -1,0 +1,7 @@
+{
+    "cmake.generator": "NMake Makefiles",
+    "cmake.configureArgs": "-DPICO_BOARD=pico_w", "-DWIFI_SSID="AdCon"", "-DWIFI_PASSWORD="Constante123"",
+    "cmake.configureEnvironment": {
+        "PICO_SDK_PATH": "C:\\RP2040\\pico-sdk"
+    }
+}

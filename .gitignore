@@ -1,0 +1,10 @@
+.idea
+_deps
+cmake-*
+build/*
+!build/serialBlink
+build/serialBlink/*
+!build/serialBlink/*.uf2
+.DS_Store
+*.pdf
+.cache
