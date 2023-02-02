@@ -1,0 +1,13 @@
+.idea
+.vscode/*
+!.vscode/settings.json
+_deps
+cmake-*
+build/*
+!build/serialBlink
+build/serialBlink/*
+!build/serialBlink/*.uf2
+!build/serialBlink/*.elf
+.DS_Store
+*.pdf
+.cache

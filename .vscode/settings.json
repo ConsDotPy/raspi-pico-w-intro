@@ -1,0 +1,6 @@
+{
+    "cmake.generator": "NMake Makefiles",
+    "cmake.configureEnvironment": {
+        "PICO_SDK_PATH": "C:\\RP2040\\pico-sdk"
+    }
+}
