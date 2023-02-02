@@ -2,9 +2,9 @@
 _deps
 cmake-*
 build/*
-!build/serialBlink
-build/serialBlink/*
-!build/serialBlink/*.uf2
+!build/blinkSerial
+build/blinkSerial/*
+!build/blinkSerial/*.uf2
 .DS_Store
 *.pdf
 .cache
