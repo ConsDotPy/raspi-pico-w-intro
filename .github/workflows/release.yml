@@ -10,12 +10,12 @@ jobs:
 
     steps:
       # Create a temporary, uniquely named branch to push release info to
-      - name: Create Branch
+      - name: create temporary branch
         uses: peterjgrainger/action-create-branch@v2.3.0
         id: create-branch
         with:
           branch: "release-from-${{ github.event.pull_request.head.sha }}"
-          sha: '${{ github.event.pull_request.head.sha }}'
+          sha: "${{ github.event.pull_request.head.sha }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -24,7 +24,7 @@ jobs:
 
       # fetch branches and switch to the temporary branch
       - name: switch to new branch
-        run: git fetch --all && git checkout --track origin/release-from-${{ github.sha }}
+        run: git fetch --all && git checkout --track origin/release-from-${{ github.event.pull_request.head.sha }}
 
       # create release info and push it upstream
       - name: conventional Changelog Action
@@ -33,14 +33,14 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version-file: "./package.json,./package-lock.json"
-          git-branch: "release-from-${{ github.sha }}"
+          git-branch: "release-from-${{ github.event.pull_request.head.sha }}"
           skip-on-empty: false
           skip-git-pull: true
 
       # create PR using GitHub CLI
       - name: create PR with release info
         id: create-pr
-        run: gh pr create --base master --head release-from-${{ github.sha }} --title 'Merge new release into master' --body 'Created by Github action'
+        run: gh pr create --base master --head release-from-${{ github.event.pull_request.head.sha }} --title 'Merge new release into master' --body 'Created by Github action'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
