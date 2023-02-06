@@ -12,4 +12,4 @@ Setting up debugger helps to understand what's inside RP2040. Allows to flash it
 ![Working Debugger, make things easier.](images/debugSetup.png)
 
 ## GitHub Actions
-Test with GitHub Actions were done.
+Test with GitHub Actions were done. Now releases are done automatically as pushes to branch "master" keep coming.
