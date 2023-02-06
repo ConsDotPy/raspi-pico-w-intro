@@ -5,6 +5,8 @@ build/*
 !build/blinkSerial
 build/blinkSerial/*
 !build/blinkSerial/*.uf2
+!build/blinkSerial/*.elf
 .DS_Store
 *.pdf
 .cache
+.cortex-debug.*

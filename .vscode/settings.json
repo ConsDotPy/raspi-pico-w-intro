@@ -1,7 +1,9 @@
 {
     "cmake.generator": "NMake Makefiles",
-    "cmake.configureArgs": "-DPICO_BOARD=pico_w", "-DWIFI_SSID="AdCon"", "-DWIFI_PASSWORD="Constante123"",
+    "cmake.configureArgs": ["-DPICO_BOARD=pico_w", "-DWIFI_SSID=AdCon", "-DWIFI_PASSWORD=Constante123"],
     "cmake.configureEnvironment": {
         "PICO_SDK_PATH": "C:\\RP2040\\pico-sdk"
-    }
+    },
+    "cortex-debug.openocdPath": "C:\\RP2040\\openocd\\src\\openocd.exe",
+    "cortex-debug.gdbPath": "C:\\Program Files (x86)\\Arm GNU Toolchain arm-none-eabi\\12.2 rel1\\bin\\arm-none-eabi-gdb",
 }

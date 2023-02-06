@@ -6,10 +6,6 @@ if (TARGET tinyusb_device)
     # pull in common dependencies
     target_link_libraries(blinkSerial pico_stdlib)
 
-    # enable usb output, disable uart output
-    pico_enable_stdio_usb(blinkSerial 1)
-    pico_enable_stdio_uart(blinkSerial 0)
-
     # create map/bin/hex file etc.
     pico_add_extra_outputs(blinkSerial)
 

@@ -26,9 +26,9 @@
     {
         gpio_put(LED_PIN, 1);
         printf("Hello, ");
-        sleep_ms(1000);
+        sleep_ms(500);
         gpio_put(LED_PIN, 0);
         printf("World!\n");
-        sleep_ms(1000);
+        sleep_ms(500);
     }
  }
