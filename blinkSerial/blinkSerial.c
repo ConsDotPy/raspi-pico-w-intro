@@ -17,18 +17,18 @@
 
  int main() 
  {
-    stdio_init_all();
     bi_decl(bi_program_description("New Serial Blink"));
-    bi_decl(bi_1pin_with_name(LED_PIN, "On-Board LED"));
+    bi_decl(bi_1pin_with_name(LED_PIN, "ProtoBoard LED"));
+    stdio_init_all();
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
     while(true)
     {
         gpio_put(LED_PIN, 1);
-        printf("Hello, ");
-        sleep_ms(500);
+        printf("Hello, "); // DevSkim: ignore DS154189
+        sleep_ms(100);
         gpio_put(LED_PIN, 0);
-        printf("World!\n");
-        sleep_ms(500);
+        printf("World!\n"); // DevSkim: ignore DS154189
+        sleep_ms(100);
     }
  }
