@@ -1,14 +1,16 @@
 {
-    "cmake.generator": "MinGW Makefiles",
+    "cmake.generator": "NMake Makefiles",
     "cmake.configureArgs": ["-DPICO_BOARD=pico_w", "-DWIFI_SSID=AdCon", "-DWIFI_PASSWORD=Constante123"],
     "cmake.configureEnvironment": {
-        "PICO_SDK_PATH": "C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\pico-sdk"
+        "PICO_SDK_PATH": "C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\pico-sdk",
     },
     "cortex-debug.openocdPath": "C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\openocd\\openocd.exe",
     "cortex-debug.gdbPath": "arm-none-eabi-gdb.exe",
     "cSpell.words": [
+        "Constante",
         "gpio",
-        "Pico"
+        "Pico",
+        "ssid"
     ],
     "cortex-debug.gdbPath.windows": "C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\gcc-arm-none-eabi\\bin\\arm-none-eabi-gdb.exe",
     "cortex-debug.armToolchainPath": "C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\gcc-arm-none-eabi\\bin",

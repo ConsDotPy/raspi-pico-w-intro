@@ -1,7 +1,11 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Pull in SDK (must be before project)
-include("C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\pico-sdk\\pico_sdk_init.cmake")
+include("C:\\Program Files\\Raspberry Pi\\Pico SDK v1.5.1\\pico-sdk\\external\\pico_sdk_import.cmake")
+
+
+set(WIFI_SSID "${WIFI_SSID}" CACHE INTERNAL "WiFi SSID for examples")
+set(WIFI_PASSWORD "${WIFI_PASSWORD}" CACHE INTERNAL "WiFi password for examples")
 
 project(raspi-pico-w-intro C CXX ASM)
 set(CMAKE_C_STANDARD 11)
